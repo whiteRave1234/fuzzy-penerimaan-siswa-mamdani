@@ -37,7 +37,7 @@ class Fuzzifikasi:
             TPAt=0
 
         # Update
-        self.memberTPA=[TPAr,TPAs,TPAt]
+        self.memberTPA=[TPAr,TPAs,TPAr]
 
 
     def UN(self,un):
