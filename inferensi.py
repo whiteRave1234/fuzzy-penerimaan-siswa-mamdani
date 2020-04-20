@@ -1,13 +1,12 @@
 class Inferensi :
     
     x = {} #Rules Array Dictionary
-    #Maks 1 karena hanya ada label untuk tinggi dan rendah
     #[TPA_Label][UN_Label][Jarak_label]
     #TPA    : 0 = Tinggi , 1 = Sedang , 2 = Rendah
     #UN     : 0 = A , 1 = B , 2 = C, 3 =D
     #Jarak  : 0 = Dekat, 1 = Normal, 2 = Jauh
     #Tinggi
-    x[0][0][0] = 1
+    x[0][0][0] = 1      # -> Maks 1 karena hanya ada label untuk tinggi(0) dan rendah(1)
     x[0][1][0] = 1
     x[0][2][0] = 1
     x[0][3][0] = 1
@@ -71,14 +70,15 @@ class Inferensi :
                                 pass
                             else : 
                                 #Get "Value" of NK not "which" NK
-                                val = min(tpa,un,jarak)
+                                val = min(tpa,un,jarak) #minimasi nilai tpa,un,jarak
                                 NKlabel = x[i][j][k]
-                                if (NKlabel == 1):
+                                if (NKlabel == 1):      #if NK == 1 -> Tinggi
                                     y.append(val)
-                                elif (NKlabel == 0):
+                                elif (NKlabel == 0):    #elif NK == 0 -> Rendah
                                     z.append(val)
+        #maksimisasi
         max(y)
         max(z)
         
-    def infer(self, TPA, UN, Jarak):
+    def inferensi(self, TPA, UN, Jarak):
     
