@@ -1,2 +1,3 @@
 class Defuzifkasi :
-    def __init__(self,tinggi,rendah)
+    def __init__(self,tinggi,rendah) :
+        for
