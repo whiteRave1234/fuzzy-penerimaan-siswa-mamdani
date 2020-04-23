@@ -1,5 +1,5 @@
 x = {} #Rules Array Dictionary
-#[TPA_Label][UN_Label][Jarak_label]
+#x[TPA_Label][UN_Label][Jarak_label]
 #TPA    : 0 = Tinggi , 1 = Sedang , 2 = Rendah
 #UN     : 0 = A , 1 = B , 2 = C, 3 =D
 #Jarak  : 0 = Dekat, 1 = Normal, 2 = Jauh
@@ -23,10 +23,6 @@ x[1][0][1] = 1
 x[1][1][1] = 1
 x[2][0][1] = 1
 x[2][1][1] = 1
-#[TPA_Label][UN_Label][Jarak_label]
-#TPA    : 0 = Tinggi , 1 = Sedang , 2 = Rendah
-#UN     : 0 = A , 1 = B , 2 = C, 3 =D
-#Jarak  : 0 = Dekat, 1 = Normal, 2 = Jauh
 #Rendah (Jauh)
 x[0][0][2] = 0
 x[0][1][2] = 0
@@ -48,7 +44,6 @@ x[1][3][1] = 0
 x[2][2][1] = 0
 x[3][3][1] = 0
 class Inferensi :
-
     def __init__(self, TPA, UN, Jarak):
         #Ekstrak Array
         y = []
