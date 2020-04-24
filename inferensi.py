@@ -1,4 +1,14 @@
-x = {} #Rules Array Dictionary
+from collections import defaultdict
+
+def nested_dict(n, type):
+    if n == 1:
+        return defaultdict(type)
+    else:
+        return defaultdict(lambda: nested_dict(n-1, type))
+
+x = nested_dict(3,int)
+
+#Rules Array Dictionary
 #x[TPA_Label][UN_Label][Jarak_label]
 #TPA    : 0 = Tinggi , 1 = Sedang , 2 = Rendah
 #UN     : 0 = A , 1 = B , 2 = C, 3 =D
@@ -67,9 +77,11 @@ class Inferensi :
                                 val = min(tpa,un,jarak) #minimasi nilai tpa,un,jarak
                                 NKlabel = x[i][j][k]
                                 if (NKlabel == 1):      #if NK == 1 -> Tinggi
+                                    print("didapat Tinggi = ",y)
                                     y.append(val)
                                 elif (NKlabel == 0):    #elif NK == 0 -> Rendah
                                     z.append(val)
+                                    print("didapat Rendah = ",z)
         #maksimisasi
         max(y)
         max(z)
