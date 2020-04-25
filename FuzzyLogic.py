@@ -11,17 +11,22 @@ from Defuzifikasi import Defuzifkasi as Defuz
 enggar=Fuzzy("Enggar")
 wayan=Fuzzy("Wayan")
 
-enggar.TPA(0)
-enggar.UN(90)
-enggar.Jarak(10000)
+enggar.TPA(60)
+enggar.UN(78)
+enggar.Jarak(4500)
 
 AnggotaTPA=enggar.memberTPA
 AnggotaUN=enggar.memberUN
 AnggotaJarak=enggar.memberJarak
 
+print("============ Fuzifikasi ============")
 print("MemberTPA = ",enggar.memberTPA)
 print("MemberUN = ",enggar.memberUN)
 print("MemberJarak = ",enggar.memberJarak)
 
-print("========== Inferensi ==========")
+print("============ Inferensi ============")
 infer=Infer(AnggotaTPA,AnggotaUN,AnggotaJarak)
+
+print("============ Defuzifikasi ============")
+
+

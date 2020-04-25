@@ -59,12 +59,10 @@ class Inferensi :
         #Ekstrak Array
         y = []
         z = []
-        print("Array input = ",TPA)
-        print(enumerate(TPA))
         for i,tpa in enumerate(TPA):
             #i maks 3
+            print("Nilai Iterasi =",i)
             if tpa <= 0 : 
-                print("Nilai TPA = ",tpa,"Iterasi = ",i)
                 pass
             else : 
                 for j,un in enumerate(UN):
@@ -83,20 +81,22 @@ class Inferensi :
                                 print("Rules = ",i,j,k)
                                 print("Nilai Output = ",NKlabel)
                                 if (NKlabel == 1):      #if NK == 1 -> Tinggi
-                                    print("didapat Tinggi(",i,") = ",y)
+                                    # print("didapat Tinggi(",i,") = ",y)
                                     y.append(val)
                                 elif (NKlabel == 0):    #elif NK == 0 -> Rendah
                                     z.append(val)
-                                    print("didapat Rendah(",i,") = ",z)
+                                    # print("didapat Rendah(",i,") = ",z)
         #maksimisasi
         try:
             max(y)
+            iy=y[0]
         except ValueError:
-            y=[0]
+            iy=0
         try:
             max(z)
+            iz=z[0]
         except ValueError:
-            z=[0]
+            iz=0
 
-        print("MAXTinggi =",y)
-        print("MAXRendah =",z)
+        print("MAXTinggi =",iy)
+        print("MAXRendah =",iz)
