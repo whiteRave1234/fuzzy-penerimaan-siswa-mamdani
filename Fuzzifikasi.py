@@ -69,7 +69,7 @@ class Fuzzifikasi:
         else:
             B=0
         # A
-        if(un>=80):
+        if(un>=85):
             A=1
         elif(un>=75):
             A=((un-75)/(85-75))

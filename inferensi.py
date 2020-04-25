@@ -53,35 +53,50 @@ x[1][2][1] = 0
 x[1][3][1] = 0
 x[2][2][1] = 0
 x[3][3][1] = 0
+
 class Inferensi :
     def __init__(self, TPA, UN, Jarak):
         #Ekstrak Array
         y = []
         z = []
+        print("Array input = ",TPA)
+        print(enumerate(TPA))
         for i,tpa in enumerate(TPA):
             #i maks 3
             if tpa <= 0 : 
+                print("Nilai TPA = ",tpa,"Iterasi = ",i)
                 pass
             else : 
                 for j,un in enumerate(UN):
                     #j maks 3
-                    if UN <= 0 :
+                    if un <= 0 :
                         pass
                     else : 
                         for k,jarak in enumerate(Jarak):
                             #k maks 4
-                            if Jarak <= 0 :
+                            if jarak <= 0 :
                                 pass
                             else : 
                                 #Get "Value" of NK not "which" NK
                                 val = min(tpa,un,jarak) #minimasi nilai tpa,un,jarak
                                 NKlabel = x[i][j][k]
+                                print("Rules = ",i,j,k)
+                                print("Nilai Output = ",NKlabel)
                                 if (NKlabel == 1):      #if NK == 1 -> Tinggi
-                                    print("didapat Tinggi = ",y)
+                                    print("didapat Tinggi(",i,") = ",y)
                                     y.append(val)
                                 elif (NKlabel == 0):    #elif NK == 0 -> Rendah
                                     z.append(val)
-                                    print("didapat Rendah = ",z)
+                                    print("didapat Rendah(",i,") = ",z)
         #maksimisasi
-        max(y)
-        max(z)
+        try:
+            max(y)
+        except ValueError:
+            y=[0]
+        try:
+            max(z)
+        except ValueError:
+            z=[0]
+
+        print("MAXTinggi =",y)
+        print("MAXRendah =",z)
