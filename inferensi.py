@@ -97,12 +97,12 @@ class Inferensi :
         #maksimisasi
         try:
             max(y)
-            iy=y[0]
+            iy=max(y)
         except ValueError:
             iy=0
         try:
             max(z)
-            iz=z[0]
+            iz=max(z)
         except ValueError:
             iz=0
 
