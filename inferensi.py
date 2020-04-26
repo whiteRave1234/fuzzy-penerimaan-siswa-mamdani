@@ -78,7 +78,12 @@ class Inferensi :
                                 #Get "Value" of NK not "which" NK
                                 val = min(tpa,un,jarak) #minimasi nilai tpa,un,jarak
                                 NKlabel = x[i][j][k]
-                                print("Rules = ",i,j,k)
+                                print("Didapat Rules : ")
+                                print("Label Rules = ",i,j,k)
+                                print(self.tpa2rule(i))
+                                print(self.un2rule(j))
+                                print(self.jarak2rule(k))
+                                print("===============")
                                 print("Nilai Output = ",NKlabel)
                                 if (NKlabel == 1):      #if NK == 1 -> Tinggi
                                     # print("didapat Tinggi(",i,") = ",y)
@@ -100,3 +105,28 @@ class Inferensi :
 
         print("MAXTinggi =",iy)
         print("MAXRendah =",iz)
+
+    def tpa2rule(self,arg):
+        switcher ={
+            0:"Tinggi",
+            1:"Sedang",
+            2:"Rendah"
+        }
+        return switcher.get(arg,"Rule TPA tidak tersedia")
+
+    def un2rule(self,arg):
+        switcher ={
+            0:"A",
+            1:"B",
+            2:"C",
+            3:"D"
+        }
+        return switcher.get(arg,"Rule UN tidak tersedia")
+
+    def jarak2rule(self,arg):
+        switcher ={
+            0:"Dekat",
+            1:"Normal",
+            2:"Jauh",
+        }
+        return switcher.get(arg,"Rule UN tidak tersedia")  

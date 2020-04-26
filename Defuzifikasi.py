@@ -3,7 +3,6 @@ class Defuzifkasi :
         x=0;    a=0
         b=0;    c=0
         numerator=0
-        print("defuzifikasi")
         while (x <= 10):
             if(x<=5 and x!=0):
                 a=x+a
@@ -37,3 +36,4 @@ class Defuzifkasi :
         self.hasil=numerator/denumerator
         print(numerator)
         print(denumerator)
+        print(self.hasil)

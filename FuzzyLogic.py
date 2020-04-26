@@ -28,5 +28,5 @@ print("============ Inferensi ============")
 infer=Infer(AnggotaTPA,AnggotaUN,AnggotaJarak)
 
 print("============ Defuzifikasi ============")
-
+Defuzifikasi=Defuz(0.3,0)
 
