@@ -61,7 +61,6 @@ class Inferensi :
         z = []
         for i,tpa in enumerate(TPA):
             #i maks 3
-            print("Nilai Iterasi =",i)
             if tpa <= 0 : 
                 pass
             else : 
@@ -78,18 +77,22 @@ class Inferensi :
                                 #Get "Value" of NK not "which" NK
                                 val = min(tpa,un,jarak) #minimasi nilai tpa,un,jarak
                                 NKlabel = x[i][j][k]
-                                print("Didapat Rules : ")
-                                print("Label Rules = ",i,j,k)
-                                print(self.tpa2rule(i))
-                                print(self.un2rule(j))
-                                print(self.jarak2rule(k))
-                                print("===============")
-                                print("Nilai Output = ",NKlabel)
+                                print("=================")
+                                print("Inferensi ke :",i,j,k)
+                                print("=================")
+                                print("         Didapat Rules : ")
+                                print("         Label Rules = ",i,j,k)
+                                print("         Nilai Fuzzy TPA = ",self.tpa2rule(i),"(",tpa,")")
+                                print("         Nilai Fuzzy UN = ",self.un2rule(j),"(",un,")")
+                                print("         Nilai Fuzzy Jarak = ",self.jarak2rule(k),"(",jarak,")")
+                                print("         Nilai Output = ",NKlabel)
                                 if (NKlabel == 1):      #if NK == 1 -> Tinggi
                                     # print("didapat Tinggi(",i,") = ",y)
                                     y.append(val)
+                                    print("Output Rule diterima :",y)
                                 elif (NKlabel == 0):    #elif NK == 0 -> Rendah
                                     z.append(val)
+                                    print("Output Rule tidak diterima :",z)
                                     # print("didapat Rendah(",i,") = ",z)
         #maksimisasi
         try:

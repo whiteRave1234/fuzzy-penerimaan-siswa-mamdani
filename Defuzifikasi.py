@@ -34,6 +34,6 @@ class Defuzifkasi :
             denumerator = (counta*rendah)+(countc*tinggi)+(rendah+0.5)
             
         self.hasil=numerator/denumerator
-        print(numerator)
-        print(denumerator)
-        print(self.hasil)
+        print("nilai pembilang =",numerator)
+        print("nilai pembagi =",denumerator)
+        print("hasil centroid =",self.hasil)
