@@ -85,14 +85,14 @@ class Inferensi :
                                 print("         Nilai Fuzzy TPA = ",self.tpa2rule(i),"(",tpa,")")
                                 print("         Nilai Fuzzy UN = ",self.un2rule(j),"(",un,")")
                                 print("         Nilai Fuzzy Jarak = ",self.jarak2rule(k),"(",jarak,")")
-                                print("         Nilai Output = ",NKlabel)
+                                print("         Nilai Output = ",val)
                                 if (NKlabel == 1):      #if NK == 1 -> Tinggi
                                     # print("didapat Tinggi(",i,") = ",y)
                                     y.append(val)
-                                    print("Output Rule diterima :",y)
+                                    print("Output Rule diterima/Tinggi :",y)
                                 elif (NKlabel == 0):    #elif NK == 0 -> Rendah
                                     z.append(val)
-                                    print("Output Rule tidak diterima :",z)
+                                    print("Output Rule tidak diterima/Rendah :",z)
                                     # print("didapat Rendah(",i,") = ",z)
         #maksimisasi
         try:
